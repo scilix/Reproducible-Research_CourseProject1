@@ -17,7 +17,7 @@ require("lattice")
 ## Loading and preprocessing the data
 
 The data is read from the manually unzipped csv file. Dates are converted to date objects and timestamps are converted to a consistent HH:MM format and minutes format.
-```{r, echo=TRUE}
+```{r process data, echo=TRUE}
 
 raw_data <- read.csv("activity/activity.csv", header = T, na.strings = "NA")
 
@@ -47,7 +47,7 @@ Over a total of `r nrow(steps_per_day)` days, the average number of steps was `r
 
 A Histogram of the steps per day looks as follows:
 
-```{r, steps per day - histogram, echo=TRUE}
+```{r, steps_per_day_-_histogram, echo=TRUE}
 
 hist(steps_per_day$steps_total,breaks = 20, xlab="Number of steps",main = "Steps per day")
 
@@ -60,7 +60,7 @@ A large number of days with zero steps can be obeserved. This is due to the fact
 Across all `r nrow(unique(data$date))` days in the dataset, the steps per 5-min-interval
 are averaged an shown in the plot below.
 
-```{r}
+```{r daily_activity_pattern, echo=TRUE}
 
 mean_steps_per_5min <- data %>% 
     group_by(minutes) %>% 
@@ -124,7 +124,7 @@ Imputing can have different effects on the estimates of total steps per day. Com
 
 A Histogram of the steps per day looks now as follows:
 
-```{r, steps per day after imputing - histogram, echo=TRUE}
+```{r, steps_per_day_after_imputing_-_histogram, echo=TRUE}
 
 hist(steps_per_day_ai$steps_total,breaks = 20, xlab="Number of steps",main = "Steps per day")
 

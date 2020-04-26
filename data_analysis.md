@@ -93,7 +93,7 @@ A Histogram of the steps per day looks as follows:
 hist(steps_per_day$steps_total,breaks = 20, xlab="Number of steps",main = "Steps per day")
 ```
 
-![](data_analysis_files/figure-html/steps per day - histogram-1.png)<!-- -->
+![](data_analysis_files/figure-html/steps_per_day_-_histogram-1.png)<!-- -->
 
 A large number of days with zero steps can be obeserved. This is due to the fact, that days for which the data is missing are interpreted as "0 steps" here. This is not a usefull assumption, distorts the mean and median values and is corrected in the section below, where missing values are imputed to a valid and usefull assumption.
 
@@ -114,7 +114,7 @@ plot(mean_steps_per_5min$minutes/60, mean_steps_per_5min$steps,
      ylab='Average number of steps')
 ```
 
-![](data_analysis_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](data_analysis_files/figure-html/daily_activity_pattern-1.png)<!-- -->
 
 The 5-min-interval at 3.09\times 10^{4} has the highest step count throughout the day (a total of 206.1698113). 
 
@@ -186,7 +186,7 @@ A Histogram of the steps per day looks now as follows:
 hist(steps_per_day_ai$steps_total,breaks = 20, xlab="Number of steps",main = "Steps per day")
 ```
 
-![](data_analysis_files/figure-html/steps per day after imputing - histogram-1.png)<!-- -->
+![](data_analysis_files/figure-html/steps_per_day_after_imputing_-_histogram-1.png)<!-- -->
 
 
 
