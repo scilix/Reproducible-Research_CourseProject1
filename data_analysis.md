@@ -192,7 +192,6 @@ hist(steps_per_day_ai$steps_total,breaks = 20, xlab="Number of steps",main = "St
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-On weekdays more steps are taken around 08:00 in the morning and less during the trest of the day, compared to weekends.
 
 
 ```r
@@ -213,5 +212,6 @@ xyplot(weekday_steps_per_5min$steps~weekday_steps_per_5min$minutes/60|weekday_st
      layout=c(1,2))
 ```
 
-![](data_analysis_files/figure-html/weekday plot-1.png)<!-- -->
+![](data_analysis_files/figure-html/weekday_plot-1.png)<!-- -->
 
+On weekdays more steps are taken around 08:00 in the morning and less during the trest of the day, compared to weekends.

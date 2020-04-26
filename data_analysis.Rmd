@@ -141,7 +141,7 @@ weekday_data <- complete_data %>% mutate(weekday = as.factor(if_else(weekdays(da
 
 ```
 
-```{r weekday plot, echo=TRUE}
+```{r weekday_plot, echo=TRUE}
 
 weekday_steps_per_5min <- weekday_data %>% 
     group_by(minutes, weekday) %>% 
