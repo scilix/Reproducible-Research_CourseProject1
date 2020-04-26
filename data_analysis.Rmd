@@ -72,7 +72,7 @@ plot(mean_steps_per_5min$minutes/60, mean_steps_per_5min$steps,
      ylab='Average number of steps')
 ```
 
-The 5-min-interval at `r hms::as.hms(mean_steps_per_5min$minutes[which.max(mean_steps_per_5min$steps)]*60)` has the highest step count throughout the day (a total of `r max(mean_steps_per_5min$steps)`). 
+The 5-min-interval at `r format(hms::as.hms(mean_steps_per_5min$minutes[which.max(mean_steps_per_5min$steps)]*60))` in the morning has the highest step count throughout the day (a total of `r max(mean_steps_per_5min$steps)`). 
 
 
 ## Imputing missing values
@@ -118,7 +118,7 @@ mean_steps_per_day_ai <- mean(steps_per_day_ai$steps_total)
 median_steps_per_day_ai <- median(steps_per_day_ai$steps_total)
 ```
 
-Over a total of `r nrow(steps_per_day_ai)` days, the average number of steps was `r mean_steps_per_day_ai` and the median of steps per day was `r median_steps_per_day_ai`. The valus are different from the above values and represent a more consistent picture. In the analysis above days with missing values were interpreted as "0 steps", which does not seem to be a usefull assumption. Now, for days without data the average number of steps is used, which is, of course, not correct, but a usefull assumption.
+Over a total of `r nrow(steps_per_day_ai)` days, the average number of steps was `r format(mean_steps_per_day_ai)` and the median of steps per day was `r format(median_steps_per_day_ai)`. The valus are different from the above values and represent a more consistent picture. In the analysis above days with missing values were interpreted as "0 steps", which does not seem to be a usefull assumption. Now, for days without data the average number of steps is used, which is, of course, not correct, but a usefull assumption.
 
 Imputing can have different effects on the estimates of total steps per day. Compared to the analysis above, the estimate changed is now a valid value. In the analysis above, one could have completely remove the days without any data. In that case, the estimate of total steps per day would not change, when imputing missing days with the mean of the other days.
 

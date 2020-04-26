@@ -116,7 +116,7 @@ plot(mean_steps_per_5min$minutes/60, mean_steps_per_5min$steps,
 
 ![](data_analysis_files/figure-html/daily_activity_pattern-1.png)<!-- -->
 
-The 5-min-interval at 3.09\times 10^{4} has the highest step count throughout the day (a total of 206.1698113). 
+The 5-min-interval at 08:35:00 in the morning has the highest step count throughout the day (a total of 206.1698113). 
 
 
 ## Imputing missing values
@@ -175,7 +175,7 @@ mean_steps_per_day_ai <- mean(steps_per_day_ai$steps_total)
 median_steps_per_day_ai <- median(steps_per_day_ai$steps_total)
 ```
 
-Over a total of 61 days, the average number of steps was 1.0766189\times 10^{4} and the median of steps per day was 1.0766189\times 10^{4}. The valus are different from the above values and represent a more consistent picture. In the analysis above days with missing values were interpreted as "0 steps", which does not seem to be a usefull assumption. Now, for days without data the average number of steps is used, which is, of course, not correct, but a usefull assumption.
+Over a total of 61 days, the average number of steps was 10766.19 and the median of steps per day was 10766.19. The valus are different from the above values and represent a more consistent picture. In the analysis above days with missing values were interpreted as "0 steps", which does not seem to be a usefull assumption. Now, for days without data the average number of steps is used, which is, of course, not correct, but a usefull assumption.
 
 Imputing can have different effects on the estimates of total steps per day. Compared to the analysis above, the estimate changed is now a valid value. In the analysis above, one could have completely remove the days without any data. In that case, the estimate of total steps per day would not change, when imputing missing days with the mean of the other days.
 
